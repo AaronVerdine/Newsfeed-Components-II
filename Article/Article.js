@@ -151,7 +151,7 @@ function articleHeader(text) {
  }
 
  const container3 = document.querySelector('.article')
- container3.appendChild(datePara('8/14/19')) 
+ container3.appendChild(datePara('8/14/19'))
 
 // Creates a new paragraph element 
 
@@ -179,11 +179,11 @@ function articleBodyPara2(articleText) {
 }
 
 const container5 = document.querySelector('.article')
-container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph')) 
+container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph'))
  
 // Creates a third paragraph
 
- function articleBodyPara3(articleText) {
+function articleBodyPara3(articleText) {
   
     const bodyPara3 = document.createElement('p');
     bodyPara3.textContent = `${articleText}`
@@ -193,7 +193,7 @@ container5.appendChild(articleBodyPara2('This is the sample text for the 2nd par
   }
 
 const container6 = document.querySelector('.article')
-container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph')) 
+container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph'))
 
 // Creates a span housing the expandButton
 
@@ -206,52 +206,75 @@ function spanButton() {
 }
 
 const container7 = document.querySelector('.article')
-container7.appendChild(spanButton()) 
+container7.appendChild(spanButton())
 
-function bigFunction() {
+
+
+
+function bigFunction(item) {
+
   const newDiv = document.createElement('div') 
   newDiv.classList.add('article')
+  const container = document.querySelector('.articles')
+  container.appendChild(lambdaArticle(item)) 
+
 
   const h2 = document.createElement('h2')
-  h2.appendChild(document.createTextNode(`${text}`))
-  document.body.appendChild(h2)
+  const container2 = document.querySelector('.article')
+  container2.appendChild(articleHeader('article 1')) 
 
   const newPara = document.createElement('p')
 
-   newPara.textContent = `${articleDate}` 
+   newPara.textContent = 'Article Date'
    newPara.classList.add('date')
+   const container3 = document.querySelector('.article')
+
+   container3.appendChild(datePara('8/14/19')) 
 
    const bodyPara = document.createElement('p');
-    bodyPara.textContent = `${articleText}`
+    bodyPara.textContent = 'Article Text'
+    const container4 = document.querySelector('.article')
+    container4.appendChild(articleBodyPara('This is the sample text for the paragraph'))
 
-    const bodyPara2 = document.createElement('p');
-    bodyPara2.textContent = `${articleText}`
 
+   const bodyPara2 = document.createElement('p');
+    bodyPara2.textContent = 'Article Text'
+    const container5 = document.querySelector('.article')
+    container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph')) 
+
+    
     const bodyPara3 = document.createElement('p');
-    bodyPara3.textContent = `${articleText}`
+    bodyPara3.textContent = 'Article Text'
+    const container6 = document.querySelector('.article')
+    container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph'))
+
 
     const button = document.createElement('span')
     button.classList.add('expandButton')
+    const container7 = document.querySelector('.article')
+    container7.appendChild(spanButton()) 
+   
 
     return newDiv
 
 }
 
-/*const container = document.querySelector('.articles')
-const container2 = document.querySelector('.article')
-const container3 = document.querySelector('.article')
-const container4 = document.querySelector('.article')
-const container5 = document.querySelector('.article')
-const container6 = document.querySelector('.article')
-const container7 = document.querySelector('.article')
+bigFunction(data) 
 
-container.appendChild(lambdaArticle())
-container2.appendChild(articleHeader('article 1'))
-container3.appendChild(datePara('8/14/19'))
-container4.appendChild(articleBodyPara('This is the sample text for the paragraph'))
-container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph'))
-container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph'))
-container7.appendChild(spanButton())*/
+let newArray = data.map(function(item) {
+  let newArticle = bigFunction(item)
+
+  return newArticle
+})
+
+newArray.forEach((item) => {
+  let nextArticle = bigFunction(item)
+  container.appendChild(nextArticle)
+
+  return nextArticle
+})
+
+
 
 /*const articleObj = {
   div: lambdaArticle(),
