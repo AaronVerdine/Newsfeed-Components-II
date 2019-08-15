@@ -113,25 +113,51 @@ const data = [
 
 */
 
-/* function lambdaArticle() {
+/*function bigFunction() {
+  const newDiv = document.createElement('div') 
+  newDiv.classList.add('article')
 
-  const div = document.createElement('div')
   const h2 = document.createElement('h2')
-  const p = document.createElement('p')
-  const obj = document.createElement('obj')
-  const span = document.createElement('span')
+  h2.appendChild(document.createTextNode(`${text}`))
+  document.body.appendChild(h2)
 
-  div.classList.add('article')
-  p.classList.add('date')
-  span.classList.add('expandButton')
+  const newPara = document.createElement('p')
 
-  h2.textContent = `${title}`
-  p.textContent =`${date}`
-  
+   newPara.textContent = `${articleDate}` 
+   newPara.classList.add('date'
+
+   const bodyPara = document.createElement('p');
+    bodyPara.textContent = `${articleText}`
+
+    const bodyPara2 = document.createElement('p');
+    bodyPara2.textContent = `${articleText}`
+
+    const bodyPara3 = document.createElement('p');
+    bodyPara3.textContent = `${articleText}`
+
+    const button = document.createElement('span')
+    button.classList.add('expandButton')
+
+    return newDiv; h2; newPara;
+
 }
 
- const body = document.querySelector('body')
- body.appendChild(lambdaArticle()) */
+const container = document.querySelector('.articles')
+const container2 = document.querySelector('.article')
+const container3 = document.querySelector('.article')
+const container4 = document.querySelector('.article')
+const container5 = document.querySelector('.article')
+const container6 = document.querySelector('.article')
+const container7 = document.querySelector('.article')
+
+container.appendChild(lambdaArticle())
+container2.appendChild(articleHeader('article 1'))
+container3.appendChild(datePara('8/14/19'))
+container4.appendChild(articleBodyPara('This is the sample text for the paragraph'))
+container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph'))
+container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph'))
+container7.appendChild(spanButton())*/
+
 
 //  Creates a new div and assigns it to class 'article'
 
@@ -143,7 +169,7 @@ function lambdaArticle() {
 }
 
 const container = document.querySelector('.articles')
-container.appendChild(lambdaArticle())
+container.appendChild(lambdaArticle()) 
 
 //  Creates a new h2 element and creates a text node for the tile of the Article
 
@@ -156,7 +182,7 @@ function articleHeader(text) {
 }
 
  const container2 = document.querySelector('.article')
- container2.appendChild(articleHeader('article 1'))
+ container2.appendChild(articleHeader('article 1')) 
 
  // Creates new paragraph element, assigns it to date class, and accepts a date string as an argument
 
@@ -170,7 +196,7 @@ function articleHeader(text) {
  }
 
  const container3 = document.querySelector('.article')
- container3.appendChild(datePara('8/14/19'))
+ container3.appendChild(datePara('8/14/19')) 
 
 // Creates a new paragraph element 
 
@@ -198,7 +224,7 @@ function articleBodyPara2(articleText) {
 }
 
 const container5 = document.querySelector('.article')
-container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph'))
+container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph')) 
  
 // Creates a third paragraph
 
@@ -212,7 +238,7 @@ container5.appendChild(articleBodyPara2('This is the sample text for the 2nd par
   }
 
 const container6 = document.querySelector('.article')
-container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph'))
+container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph')) 
 
 // Creates a span housing the expandButton
 
@@ -225,4 +251,14 @@ function spanButton() {
 }
 
 const container7 = document.querySelector('.article')
-container7.appendChild(spanButton())
+container7.appendChild(spanButton()) 
+
+/*const articleObj = {
+  div: lambdaArticle(),
+  h2: articleHeader(text),
+  p: datePara(articleDate),
+  p: articleBodyPara(articleText),
+  p: articleBodyPara2(articleText),
+  p: articleBodyPara3(articleText),
+  span: spanButton(),
+ } */
