@@ -113,51 +113,6 @@ const data = [
 
 */
 
-/*function bigFunction() {
-  const newDiv = document.createElement('div') 
-  newDiv.classList.add('article')
-
-  const h2 = document.createElement('h2')
-  h2.appendChild(document.createTextNode(`${text}`))
-  document.body.appendChild(h2)
-
-  const newPara = document.createElement('p')
-
-   newPara.textContent = `${articleDate}` 
-   newPara.classList.add('date'
-
-   const bodyPara = document.createElement('p');
-    bodyPara.textContent = `${articleText}`
-
-    const bodyPara2 = document.createElement('p');
-    bodyPara2.textContent = `${articleText}`
-
-    const bodyPara3 = document.createElement('p');
-    bodyPara3.textContent = `${articleText}`
-
-    const button = document.createElement('span')
-    button.classList.add('expandButton')
-
-    return newDiv; h2; newPara;
-
-}
-
-const container = document.querySelector('.articles')
-const container2 = document.querySelector('.article')
-const container3 = document.querySelector('.article')
-const container4 = document.querySelector('.article')
-const container5 = document.querySelector('.article')
-const container6 = document.querySelector('.article')
-const container7 = document.querySelector('.article')
-
-container.appendChild(lambdaArticle())
-container2.appendChild(articleHeader('article 1'))
-container3.appendChild(datePara('8/14/19'))
-container4.appendChild(articleBodyPara('This is the sample text for the paragraph'))
-container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph'))
-container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph'))
-container7.appendChild(spanButton())*/
-
 
 //  Creates a new div and assigns it to class 'article'
 
@@ -252,6 +207,51 @@ function spanButton() {
 
 const container7 = document.querySelector('.article')
 container7.appendChild(spanButton()) 
+
+function bigFunction() {
+  const newDiv = document.createElement('div') 
+  newDiv.classList.add('article')
+
+  const h2 = document.createElement('h2')
+  h2.appendChild(document.createTextNode(`${text}`))
+  document.body.appendChild(h2)
+
+  const newPara = document.createElement('p')
+
+   newPara.textContent = `${articleDate}` 
+   newPara.classList.add('date')
+
+   const bodyPara = document.createElement('p');
+    bodyPara.textContent = `${articleText}`
+
+    const bodyPara2 = document.createElement('p');
+    bodyPara2.textContent = `${articleText}`
+
+    const bodyPara3 = document.createElement('p');
+    bodyPara3.textContent = `${articleText}`
+
+    const button = document.createElement('span')
+    button.classList.add('expandButton')
+
+    return newDiv
+
+}
+
+/*const container = document.querySelector('.articles')
+const container2 = document.querySelector('.article')
+const container3 = document.querySelector('.article')
+const container4 = document.querySelector('.article')
+const container5 = document.querySelector('.article')
+const container6 = document.querySelector('.article')
+const container7 = document.querySelector('.article')
+
+container.appendChild(lambdaArticle())
+container2.appendChild(articleHeader('article 1'))
+container3.appendChild(datePara('8/14/19'))
+container4.appendChild(articleBodyPara('This is the sample text for the paragraph'))
+container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph'))
+container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph'))
+container7.appendChild(spanButton())*/
 
 /*const articleObj = {
   div: lambdaArticle(),
