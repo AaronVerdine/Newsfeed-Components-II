@@ -218,7 +218,7 @@ container7.appendChild(spanButton())*/
 function bigFunction(data) {
 
   const newDiv = document.createElement('div') 
-  newDiv.classList.add('article-open', 'article')
+  newDiv.classList.add('article')
 
   
   const h2 = document.createElement('h2')
@@ -245,14 +245,24 @@ function bigFunction(data) {
 
     const button = document.createElement('span')
     button.classList.add('expandButton')
-    button.textContent = 'Click to open!'
+    button.textContent = 'Open this article!'
+    button.addEventListener('click', event => {
+      newDiv.classList.toggle('article-open')
+      
+      if (button.textContent === 'Open this article!') {
+        button.textContent = 'Close This Article'
+      }
+      else {
+        button.textContent = 'Open this article!'
+    }
+  }) 
     newDiv.appendChild(button) 
    
     const container = document.querySelector('.articles')
     container.appendChild(newDiv) 
 
 
-}
+    }
 
 
 
