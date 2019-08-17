@@ -37,16 +37,11 @@ let menuItems = [
 function menuCreator(menuItems) {
 
   const menu = document.createElement('div')
-  menu.classList.add('menu', 'menu-open')
-  menu.addEventListener('click', event => {
-    event.target.classList.toggle('menu-open')
-    
-    if (event.target.textContent === 'menu-open') {
-      event.target.textContent = 'Close menu!'
-    }
-    else {
-      event.target.textContent = 'Open menu!'
-    } 
+  menu.classList.add('menu')
+
+  const  button = document.querySelector('.menu-button')
+    button.addEventListener('click', event => {
+      menu.classList.toggle('menu--open')
 
   })
   const list = document.createElement('ul')
@@ -57,7 +52,9 @@ function menuCreator(menuItems) {
     listItem.textContent = item;
     list.appendChild(listItem)
   })
-  document.body.appendChild(menu);
+  return menu
 }
 
-menuCreator(menuItems)
+const menu = menuCreator(menuItems)
+document.body.appendChild(menu);
+console.log(menu)
