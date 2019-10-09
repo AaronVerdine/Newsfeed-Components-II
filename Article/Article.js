@@ -113,110 +113,9 @@ const data = [
 
 */
 
-
-//  Creates a new div and assigns it to class 'article'
-
-/*function lambdaArticle() {
-  const newDiv = document.createElement('div') 
-  newDiv.classList.add('article')
-  
-  return newDiv
-}
-
-const container = document.querySelector('.articles')
-container.appendChild(lambdaArticle()) 
-
-//  Creates a new h2 element and creates a text node for the tile of the Article
-
-function articleHeader(text) {
-  const h2 = document.createElement('h2')
-  h2.appendChild(document.createTextNode(`${text}`))
-  document.body.appendChild(h2)
-
-  return h2
-}
-
- const container2 = document.querySelector('.article')
- container2.appendChild(articleHeader('article 1')) 
-
- // Creates new paragraph element, assigns it to date class, and accepts a date string as an argument
-
- function datePara(articleDate) {
-   const newPara = document.createElement('p')
-
-   newPara.textContent = `${articleDate}`  // Make sure that displays the *DATE OF ARTICLE* not curent date *should be a string*
-   newPara.classList.add('date')
-
-   return newPara
- }
-
- const container3 = document.querySelector('.article')
- container3.appendChild(datePara('8/14/19'))
-
-// Creates a new paragraph element 
-
- function articleBodyPara(articleText) {
-  
-    const bodyPara = document.createElement('p');
-    bodyPara.textContent = `${articleText}`
-  
-    return bodyPara
-  
-  }
-
-const container4 = document.querySelector('.article')
-container4.appendChild(articleBodyPara('This is the sample text for the paragraph'))
-
- // Creates a second paragraph
-
-function articleBodyPara2(articleText) {
-  
-  const bodyPara2 = document.createElement('p');
-  bodyPara2.textContent = `${articleText}`
-
-  return bodyPara2
-
-}
-
-const container5 = document.querySelector('.article')
-container5.appendChild(articleBodyPara2('This is the sample text for the 2nd paragraph'))
- 
-// Creates a third paragraph
-
-function articleBodyPara3(articleText) {
-  
-    const bodyPara3 = document.createElement('p');
-    bodyPara3.textContent = `${articleText}`
-  
-    return bodyPara3
-  
-  }
-
-const container6 = document.querySelector('.article')
-container6.appendChild(articleBodyPara3('This is the sample text for the 3rd paragraph'))
-
-// Creates a span housing the expandButton
-
-function spanButton() {
-
-  const button = document.createElement('span')
-  button.classList.add('expandButton')
-
-  function logEvent(event) {
-    const item
-  }
-
-  return button
-}
-
-const container7 = document.querySelector('.article')
-container7.appendChild(spanButton())*/
-
-
-
 // WEBPT*8 Solution
 
-/*function bigFunction(data) {
+function bigFunction(data) {
 
   const newDiv = document.createElement('div') 
   newDiv.classList.add('article')
@@ -263,29 +162,13 @@ container7.appendChild(spanButton())*/
     container.appendChild(newDiv) 
 
 
-    }*/
+    }
 
 
 
-// let newArray = data.map(function(item) {
-//   let newArticle = bigFunction(item)
-
-//   return newArticle
-// })
-
-// WEBPT8
-// data.forEach((item) => {
-//   bigFunction(item)
-// })
+data.forEach((item) => {
+  bigFunction(item)
+})
 
 
 
-/*const articleObj = {
-  div: lambdaArticle(),
-  h2: articleHeader(text),
-  p: datePara(articleDate),
-  p: articleBodyPara(articleText),
-  p: articleBodyPara2(articleText),
-  p: articleBodyPara3(articleText),
-  span: spanButton(),
- } */
