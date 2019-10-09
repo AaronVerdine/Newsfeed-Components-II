@@ -214,8 +214,9 @@ container7.appendChild(spanButton())*/
 
 
 
+// WEBPT*8 Solution
 
-function bigFunction(data) {
+/*function bigFunction(data) {
 
   const newDiv = document.createElement('div') 
   newDiv.classList.add('article')
@@ -262,7 +263,7 @@ function bigFunction(data) {
     container.appendChild(newDiv) 
 
 
-    }
+    }*/
 
 
 
@@ -272,9 +273,10 @@ function bigFunction(data) {
 //   return newArticle
 // })
 
-data.forEach((item) => {
-  bigFunction(item)
-})
+// WEBPT8
+// data.forEach((item) => {
+//   bigFunction(item)
+// })
 
 
 

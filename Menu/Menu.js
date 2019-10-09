@@ -34,7 +34,19 @@ let menuItems = [
   
 */
 
-function menuCreator(menuItems) {
+// WEBPT10 Solution
+
+function menuComponent() {
+  const menuDiv = document.createElement
+
+}
+
+
+
+
+// WEBPT8 Solution
+
+/* function menuCreator(menuItems) {
 
   const menu = document.createElement('div')
   menu.classList.add('menu')
@@ -57,4 +69,4 @@ function menuCreator(menuItems) {
 
 const menu = menuCreator(menuItems)
 document.body.appendChild(menu);
-console.log(menu)
+console.log(menu)*/
