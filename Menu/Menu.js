@@ -34,6 +34,7 @@ let menuItems = [
   
 */
 
+
 function menuCreator(menuItems) {
 
   const menu = document.createElement('div')
